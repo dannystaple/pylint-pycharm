@@ -23,3 +23,13 @@ Example:
 
 Example with virtual path:
     python pylint_pycharm.py sample.py --virtualenv=/home/smith/virtualenv
+
+Setting up Pycharm variables for PYTHONPATH based on project structure:
+In the pycharm external tools dialog:
+
+Program:  env
+Parameters: 
+    PYTHONPATH=${PYTHONPATH}:$Sourcepath$ <your path for /pylint-pycharm> --virtualenv=<path to your venv> $FilePath$
+Working Dir: $FileDir$
+
+
